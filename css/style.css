@@ -196,6 +196,7 @@ nav #lamp:hover ~ #VPB {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-bottom: 20rem;
 }
 
 .middle-business {
