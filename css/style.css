@@ -19,6 +19,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
+  max-width: 100%;
   color: var(--color--white);
   background-color: #070311;
 }
@@ -45,7 +46,10 @@ nav .logo {
   font-family: 'Ananda', sans-serif;
   font-size: 2.5rem;
   margin: 3rem 5%;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000,
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+ 1px 1px 0 #000;
 }
 
 nav .logo span {
@@ -312,7 +316,10 @@ nav #lamp:hover ~ #VPB {
   position: absolute;
   z-index: -1;
   visibility: hidden;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000,
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+ 1px 1px 0 #000;
 }
 
 .tooltip span {
@@ -2199,8 +2206,10 @@ article {
   border-radius: 50%;
   -webkit-transform: scale(1) translate3d(75px, 0, 0);
           transform: scale(1) translate3d(75px, 0, 0);
-  -webkit-box-shadow: 0 0 10px 0 #820286 inset, 0 0 10px 0 #9e0196 inset;
-          box-shadow: 0 0 10px 0 #820286 inset, 0 0 10px 0 #9e0196 inset;
+  -webkit-box-shadow: 0 0 10px 0 #820286 inset,
+ 0 0 10px 0 #9e0196 inset;
+          box-shadow: 0 0 10px 0 #820286 inset,
+ 0 0 10px 0 #9e0196 inset;
 }
 
 .black-hole .gooey-container .bubble:nth-child(1) {
