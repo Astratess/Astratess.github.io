@@ -140,6 +140,7 @@ nav #lamp:hover ~ #VPB {
   font-size: 3rem;
   font-family: 'Ananda';
   margin-bottom: 3rem;
+  text-align: center;
   -webkit-box-shadow: var(--color--golden) 0px 1px;
           box-shadow: var(--color--golden) 0px 1px;
 }
@@ -214,6 +215,7 @@ nav #lamp:hover ~ #VPB {
 .quote {
   margin: auto;
   font-size: 3rem;
+  text-align: center;
   -webkit-transition: 2s;
   transition: 2s;
   border-bottom: 2px solid var(--color--golden);
@@ -302,6 +304,25 @@ nav #lamp:hover ~ #VPB {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.small-business {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2980,9 +3001,10 @@ article {
   }
   .quote {
     margin: 1em auto;
-    font-size: 1.5rem;
+    font-size: 2rem;
     -webkit-transition: 2s;
     transition: 2s;
+    border-top: 2px solid var(--color--golden);
   }
   .knowledge-b {
     height: 150vh;
@@ -2994,6 +3016,108 @@ article {
   .certification-b p:nth-of-type(2) {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+  }
+  .tooltip {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  @-webkit-keyframes menuanchor {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 32%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 22%;
+    }
+  }
+  @keyframes menuanchor {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 32%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 22%;
+    }
+  }
+  @-webkit-keyframes menugit {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 22%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 15%;
+    }
+  }
+  @keyframes menugit {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 22%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 15%;
+    }
+  }
+  @-webkit-keyframes menuli {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 12%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 8%;
+    }
+  }
+  @keyframes menuli {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 12%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 8%;
+    }
+  }
+  @-webkit-keyframes menumail {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 2%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 1%;
+    }
+  }
+  @keyframes menumail {
+    0% {
+      position: fixed;
+      left: -30%;
+      bottom: 2%;
+    }
+    100% {
+      position: fixed;
+      left: -4%;
+      bottom: 1%;
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */

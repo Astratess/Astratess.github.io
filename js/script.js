@@ -69,7 +69,7 @@ socialmail.addEventListener('click',() => {
   dimmer.style.transition = "1.5s"
   body.style.overflow = "hidden";
   body.style.height = "100%"
-})
+}) 
 
 mail.addEventListener('click',() => {
   scroll.style.transform = "translateX(0)";
