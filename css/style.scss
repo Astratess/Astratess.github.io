@@ -520,10 +520,6 @@ nav {
 
 /*#region Cards*/
 
-.card-holder {
-  z-index: 2;
-}
-
 #chest:hover ~ #sea-holder .card {
 
   position: absolute;
@@ -597,7 +593,7 @@ nav {
 
 .card-holder .card {
   position: absolute;
-  top: calc(50% - 100px);
+  top: 30%;
   left: 50%;
   transform: translate(-50%, calc(10px * var(--i))) rotate(40deg) skew(-30deg, -10deg) scale(0.4);
   width: 300px;
@@ -618,7 +614,7 @@ nav {
   z-index: 1;
   opacity: 1;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
-  transform: translate(calc(-20% + calc(320px * var(--i)))) rotate(0deg) skew(0deg, 0deg) translateY(-30%) translateX(-350%);
+  transform: translate(calc(-20% + calc(320px * var(--i)))) rotate(0deg) skew(0deg, 0deg) translateY(-30%) translateX(50%);
 
   .content {
     opacity: 1;
@@ -740,6 +736,67 @@ nav {
   margin-bottom: 20em;
   z-index: 2;
 }
+
+.achievments-i{
+  .flex-part-b{
+    flex-direction: row;
+      .wider{
+        width: 150px !important;
+        height: 100px !important;
+        display: inline;
+      }
+      .standart{
+        width: 100px !important;
+        height: 150px !important;
+        display: inline;
+      }
+      img{
+        border-radius: 3%;
+      }
+      img:hover{
+        transform: rotatez(0) scale(3.5);
+        transition: 3s;
+      }
+      img:nth-of-type(1){
+        margin: 1rem 2rem 2rem 0;
+        transform: rotatez(30deg);
+        &:hover{
+          transform: rotatez(0) scale(3.5);
+          transition: 3s;
+          z-index: 1;
+        }
+      }
+      img:nth-of-type(2){
+        margin: 0 2rem 2rem 2rem;
+        transform: rotatez(-50deg);
+        &:hover{
+          transform: rotatez(0) scale(3.5);
+          transition: 3s;
+          z-index: 1;
+        }
+      }
+      img:nth-of-type(3){
+        margin: 2rem 2rem 2rem 0rem;
+        transform: rotatez(10deg);
+        &:hover{
+          transform: rotatez(0) scale(3.5);
+          transition: 3s;
+          z-index: 1;
+        }
+      }
+      img:nth-of-type(4){
+        margin: 0 2rem 2rem 1rem;
+        transform: rotatez(-20deg);
+        &:hover{
+          transform: rotatez(0) scale(3.5);
+          transition: 3s;
+          z-index: 1;
+        }
+      }
+      animation: float 3s ease-in-out infinite;
+    }
+  }
+
 
 article {
   z-index: 2;
@@ -1338,7 +1395,7 @@ article {
 
   input,
   textarea {
-    font-family: 'Ananda', sans-serif;
+    font-family: 'Moda', sans-serif;
     letter-spacing: 0.1rem;
     width: 92%;
     background-color: transparent;
@@ -1346,7 +1403,7 @@ article {
     border-width: 0 0 2px 2px;
     border-color: var(--color--golden);
     font-weight: inherit;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: .8rem 1.1rem;
     outline: 0;
     color: var(--color--black);
@@ -2240,5 +2297,7 @@ article {
       
     }
   }
-
+  .achievments-i{
+    flex-direction: column-reverse;
+  }
 }

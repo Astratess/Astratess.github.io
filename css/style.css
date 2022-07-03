@@ -796,10 +796,6 @@ nav #lamp:hover ~ #VPB {
 }
 
 /*#region Cards*/
-.card-holder {
-  z-index: 2;
-}
-
 #chest:hover ~ #sea-holder .card {
   position: absolute;
   bottom: 50%;
@@ -882,7 +878,7 @@ nav #lamp:hover ~ #VPB {
 
 .card-holder .card {
   position: absolute;
-  top: calc(50% - 100px);
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, calc(10px * var(--i))) rotate(40deg) skew(-30deg, -10deg) scale(0.4);
           transform: translate(-50%, calc(10px * var(--i))) rotate(40deg) skew(-30deg, -10deg) scale(0.4);
@@ -913,8 +909,8 @@ nav #lamp:hover ~ #VPB {
   opacity: 1;
   -webkit-box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translate(calc(-20% + calc(320px * var(--i)))) rotate(0deg) skew(0deg, 0deg) translateY(-30%) translateX(-350%);
-          transform: translate(calc(-20% + calc(320px * var(--i)))) rotate(0deg) skew(0deg, 0deg) translateY(-30%) translateX(-350%);
+  -webkit-transform: translate(calc(-20% + calc(320px * var(--i)))) rotate(0deg) skew(0deg, 0deg) translateY(-30%) translateX(50%);
+          transform: translate(calc(-20% + calc(320px * var(--i)))) rotate(0deg) skew(0deg, 0deg) translateY(-30%) translateX(50%);
 }
 
 .card-holder:hover .card .content {
@@ -1027,6 +1023,94 @@ nav #lamp:hover ~ #VPB {
   background-size: cover;
   margin-bottom: 20em;
   z-index: 2;
+}
+
+.achievments-i .flex-part-b {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+.achievments-i .flex-part-b .wider {
+  width: 150px !important;
+  height: 100px !important;
+  display: inline;
+}
+
+.achievments-i .flex-part-b .standart {
+  width: 100px !important;
+  height: 150px !important;
+  display: inline;
+}
+
+.achievments-i .flex-part-b img {
+  border-radius: 3%;
+}
+
+.achievments-i .flex-part-b img:hover {
+  -webkit-transform: rotatez(0) scale(3.5);
+          transform: rotatez(0) scale(3.5);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.achievments-i .flex-part-b img:nth-of-type(1) {
+  margin: 1rem 2rem 2rem 0;
+  -webkit-transform: rotatez(30deg);
+          transform: rotatez(30deg);
+}
+
+.achievments-i .flex-part-b img:nth-of-type(1):hover {
+  -webkit-transform: rotatez(0) scale(3.5);
+          transform: rotatez(0) scale(3.5);
+  -webkit-transition: 3s;
+  transition: 3s;
+  z-index: 1;
+}
+
+.achievments-i .flex-part-b img:nth-of-type(2) {
+  margin: 0 2rem 2rem 2rem;
+  -webkit-transform: rotatez(-50deg);
+          transform: rotatez(-50deg);
+}
+
+.achievments-i .flex-part-b img:nth-of-type(2):hover {
+  -webkit-transform: rotatez(0) scale(3.5);
+          transform: rotatez(0) scale(3.5);
+  -webkit-transition: 3s;
+  transition: 3s;
+  z-index: 1;
+}
+
+.achievments-i .flex-part-b img:nth-of-type(3) {
+  margin: 2rem 2rem 2rem 0rem;
+  -webkit-transform: rotatez(10deg);
+          transform: rotatez(10deg);
+}
+
+.achievments-i .flex-part-b img:nth-of-type(3):hover {
+  -webkit-transform: rotatez(0) scale(3.5);
+          transform: rotatez(0) scale(3.5);
+  -webkit-transition: 3s;
+  transition: 3s;
+  z-index: 1;
+}
+
+.achievments-i .flex-part-b img:nth-of-type(4) {
+  margin: 0 2rem 2rem 1rem;
+  -webkit-transform: rotatez(-20deg);
+          transform: rotatez(-20deg);
+}
+
+.achievments-i .flex-part-b img:nth-of-type(4):hover {
+  -webkit-transform: rotatez(0) scale(3.5);
+          transform: rotatez(0) scale(3.5);
+  -webkit-transition: 3s;
+  transition: 3s;
+  z-index: 1;
 }
 
 article {
@@ -1923,7 +2007,7 @@ article {
 
 .input-control input,
 .input-control textarea {
-  font-family: 'Ananda', sans-serif;
+  font-family: 'Moda', sans-serif;
   letter-spacing: 0.1rem;
   width: 92%;
   background-color: transparent;
@@ -1931,7 +2015,7 @@ article {
   border-width: 0 0 2px 2px;
   border-color: var(--color--golden);
   font-weight: inherit;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: .8rem 1.1rem;
   outline: 0;
   color: var(--color--black);
@@ -3119,6 +3203,12 @@ article {
       left: -4%;
       bottom: 1%;
     }
+  }
+  .achievments-i {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 /*# sourceMappingURL=style.css.map */
