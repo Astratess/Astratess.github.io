@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Section-projects
+\* ------------------------------------------------------------ */
+
+.section-projects {
+	.section__head {
+		padding: 10rem 0;
+		color: var(--color-light-gray);
+		text-align: center;
+		background-color: var(--color-e6);
+	}
+
+	.section__head h2 {
+		&:before,
+		&:after {
+			transition: .5s transform;
+		}
+	}
+
+	.section__head h2:hover {
+		@media (hover:hover) {
+			&:before {
+				transform: translate(-2rem, -50%) rotate(-100deg);
+			}
+
+			&:after {
+				transform: translate(2rem, -50%) rotate(80deg);
+			}
+		}
+	}
+}

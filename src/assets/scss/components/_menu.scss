@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------ *\
+	Menu
+\* ------------------------------------------------------------ */
+
+.menu {
+	display: none;
+	position: absolute;
+	right: 2rem;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@include breakpoint-down(tablet) {
+		display: block;
+	}
+
+	.menu__inner {
+		display: inline-block;
+		width: 3rem;
+		height: .2rem;
+		background-color: var(--color-white);
+		position: relative;
+
+		&:before,
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: var(--color-white);
+			transition: .5s transform;
+		}
+
+		&:before {
+			transform: translateY(-1rem);
+		}
+
+		&:after {
+			transform: translateY(1rem);
+		}
+
+		&.is-active {
+			&:before {
+				transform: translate(.8rem, -.7rem) rotate(45deg) scaleX(.6);
+			}
+
+			&:after {
+				transform: translate(.8rem, .7rem) rotate(-45deg) scaleX(.6);
+			}
+		}
+	}
+}

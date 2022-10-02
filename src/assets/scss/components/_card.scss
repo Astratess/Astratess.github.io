@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	Card
+\* ------------------------------------------------------------ */
+
+.card {
+	font-size: 3.6rem;
+	color: var(--color-white);
+	min-width: 20rem;
+	min-height: 48rem;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include breakpoint-down(tablet) {
+		min-height: 28rem;
+	}
+
+	&:before,
+	&:after {
+	transform: translate(-450%, 450%) ;
+	opacity: 0;
+
+		@include breakpoint-down(tablet) {
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+	}
+
+	&:hover:before,
+	&:hover:after {
+		@media (hover:hover) {
+			transform: translate(0% , 0%);
+			opacity: 1;
+		}
+	}
+
+	&:hover a:before {
+		@media (hover:hover) {
+			transform: rotate(90deg) translate(-7.86rem,-18rem);
+		}
+	}
+
+	&:hover a:after {
+		@media (hover:hover) {
+			transform: rotate(90deg) translate(7.86rem,18rem);
+		}
+	}
+
+	a {
+		padding: 2rem 0;
+		position: relative;
+
+		@include breakpoint-down(tablet) {
+			font-size: 2.4rem;
+		}
+		
+		&:before,
+		&:after {
+		content: '';
+		width: 0.2rem;
+		height: 6.7rem;
+		position: absolute;
+		background-color: var(--color-primary);
+		left: 50%;
+		transform: translateX(-50%);
+		transition: 0.5s transform;
+		}
+
+		&:before {
+			top: 100%;
+		}
+
+		&:after {
+			bottom: 100%;
+		}
+	}
+}
