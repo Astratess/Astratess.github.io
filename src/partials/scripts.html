@@ -1,2 +1,10 @@
+<script>
+	function modalClose() {
+		setTimeout(() => {
+			document.querySelector('.modal-loading').classList.add('invisible')
+			document.body.classList.remove('is-locked')
+		}, "1000")
+	}
+</script>
 <script src="assets/vendor/jquery-3.6.0.min.js"></script>
-<script src="assets/js/bundle.js"></script>
+<script src="assets/js/bundle.js" onload="modalClose()"></script>

@@ -1,3 +1,4 @@
+if (document.querySelector('.clock')) {
 const secondsArrow = document.querySelector('.arrow-seconds')
 const minutesArrow = document.querySelector('.arrow-long')
 const hoursArrow = document.querySelector('.arrow-short')
@@ -24,6 +25,9 @@ let seconds = d.getSeconds()*6;
 let secondsRotate = d.getSeconds()*6;
 let minutes = d.getMinutes()*6;
 let hours = (d.getHours()%12)*30;
+secondsArrow.style.transform = `rotate(${secondsRotate}deg)`
+minutesArrow.style.transform = `rotate(${minutes}deg)`
+hoursArrow.style.transform = `rotate(${hours}deg)`
 
 setInterval(function () {
 	if (seconds >= 360) {
@@ -62,3 +66,4 @@ setInterval(function () {
 		cogOrange.style.transform = `rotate(${cogOrangeTimer}deg)`
 
 	}, 1000);
+}

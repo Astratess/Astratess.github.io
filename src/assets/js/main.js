@@ -3,6 +3,7 @@
  * Modules
  */
 
+import "./modules/lock-body.js"
 import "./modules/sound-trigger.js"
 import "./modules/clock.js"
 import "./modules/logo.js"

@@ -23,6 +23,7 @@ window.addEventListener('scroll', ()=> {
 				logo.style.left = "6rem"
 				logo.classList.remove('logo')
 				logoA.classList.remove('logo-a')
+				logoA.href='index.html'
 			, 1000});
 	 }
 })

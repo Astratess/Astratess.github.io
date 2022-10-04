@@ -1,6 +1,4 @@
 const widgets = document.querySelectorAll('.widget__head')
-const centerX = window.innerWidth / 2;
-const centerY = window.innerHeight /2;
 
 widgets.forEach( widget => {
 	widget.addEventListener('click', () => {
@@ -9,6 +7,8 @@ widgets.forEach( widget => {
 })
 
 function openWidget(widget) {
+		const centerX = window.innerWidth / 2;
+		const centerY = window.innerHeight /2;
 		const origX = getOffset(widget.parentNode.parentNode).left
 		const origY = getOffset(widget.parentNode.parentNode).top
 		let endX = Math.floor(centerX - origX - (widget.offsetWidth) / 2);

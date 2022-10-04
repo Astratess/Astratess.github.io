@@ -1,3 +1,3 @@
-const currentLocation = location.pathname.substring(1);
+const currentLocation = location.pathname.split("/").pop();
 
-$('nav a[href="'+ currentLocation +'"]').parent().addClass('is-active').siblings().removeClass('is-active')
+$('.nav a[href="'+ currentLocation +'"]').parent().addClass('is-active').siblings().removeClass('is-active')
