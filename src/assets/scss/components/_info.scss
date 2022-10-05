@@ -1,0 +1,142 @@
+/* ------------------------------------------------------------ *\
+	Info
+\* ------------------------------------------------------------ */
+
+.info {
+	position: relative;
+	height: 40rem;
+	width: 80%;
+	margin-left: auto;
+	display: flex;
+	background-color: var(--color-light-gray);
+	border-bottom: .4rem solid var(--color-primary);
+
+	.info__media {
+		position: absolute;
+		left: -7.5%;
+		height: 110%;
+		transform: skew(-25deg, 0deg) translateY(-5%);
+		border: .2rem solid var(--color-primary);
+
+		&:before,
+		&:after {
+			content: '';
+			width: 100%;
+			height: 10rem;
+			position: absolute;
+			border: .2rem solid var(--color-primary);
+		}
+
+		&:before {
+			bottom: 103%;
+			left: 25%;
+		}
+
+		&:after {
+			top: 103%;
+			left: -25%;
+		}
+	}
+
+	.info__image {
+		position: relative;
+		height: 100%;
+		width: 30rem;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+			display: block;
+			transform: skew(25deg, 0deg) scale(1.8, 1.5);
+		}
+	}
+
+	&:nth-child(even) {
+		margin-right: auto;
+		margin-left: 0;
+		flex-direction: row-reverse;
+
+		.info__media {
+			transform: skew(25deg, 0deg) translateY(-5%);
+			left: auto;
+			right: -7.5%;
+
+			&:before {
+				left: -25%;
+			}
+			
+			&:after {
+				left: 25%;
+			}
+
+			img {
+				transform: skew(-25deg, 0deg) scale(1.8, 1.5);
+			}
+		}
+	}
+
+	&:nth-child(1) {
+		.info__media {
+			&:before,
+			&:after {
+				background-image:  url(../images/temp/about-me.jpg);
+			}
+
+			&:before {
+				background-size: 113rem 67rem;
+				background-position: -71rem 0;
+			}
+
+			&:after {
+				background-size: 113rem 67rem;
+				background-position: -58rem bottom;
+			}
+		}
+	}
+
+	&:nth-child(2) {
+		.info__media {
+			&:before,
+			&:after {
+				background-image:  url(../images/temp/about-me-guitar.jpeg);
+			}
+
+			&:before {
+				background-size: 96rem 61rem;
+				background-position: -51rem -1rem;
+			}
+
+			&:after {
+				background-size: 90rem 80rem;
+				background-position: -59rem 15rem;
+			}
+		}		
+	}
+
+	&:nth-child(3) {
+		.info__media {
+			&:before,
+			&:after {
+				background-image:  url(../images/temp/about-me-waterfall.jpg);
+			}
+
+			&:before {
+				background-size: 113rem 67rem;
+				background-position: -71rem 0;
+			}
+
+			&:after {
+				background-size: 153rem 37rem;
+				background-position: -49rem bottom;
+			}
+		}	
+	}
+
+}
+
+.info + .info {
+	margin-top: 20rem;
+}

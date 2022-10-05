@@ -1,69 +1,77 @@
 if (document.querySelector('.clock')) {
-const secondsArrow = document.querySelector('.arrow-seconds')
-const minutesArrow = document.querySelector('.arrow-long')
-const hoursArrow = document.querySelector('.arrow-short')
-const cog1 = document.querySelector('.cog1')
-const cog2 = document.querySelector('.cog2')
-const cog3 = document.querySelector('.cog3')
-const cog4 = document.querySelector('.cog4')
-const cog5 = document.querySelector('.cog5')
-const cog6 = document.querySelector('.cog6')
-const cog7 = document.querySelector('.cog7')
-const cog8 = document.querySelector('.cog8')
-const cogOrange = document.querySelector('.cog-orange')
-let cog1Timer = 0;
-let cog2Timer = 0;
-let cog3Timer = 0;
-let cog4Timer = 0;
-let cog5Timer = 0;
-let cog6Timer = 0;
-let cog7Timer = 0;
-let cog8Timer = 0;
-let cogOrangeTimer = 0;
-const d = new Date();
-let seconds = d.getSeconds()*6;
-let secondsRotate = d.getSeconds()*6;
-let minutes = d.getMinutes()*6;
-let hours = (d.getHours()%12)*30;
-secondsArrow.style.transform = `rotate(${secondsRotate}deg)`
-minutesArrow.style.transform = `rotate(${minutes}deg)`
-hoursArrow.style.transform = `rotate(${hours}deg)`
+	const secondsArrow = document.querySelector('.arrow-seconds')
+	const minutesArrow = document.querySelector('.arrow-long')
+	const hoursArrow = document.querySelector('.arrow-short')
+	const date = new Date();
+	let seconds = date.getSeconds()*6;
+	let secondsRotate = date.getSeconds()*6;
+	let minutes = date.getMinutes()*6;
+	let hours = (date.getHours()%12)*30;
+	let cogs = document.querySelectorAll('.cog')
+	let degrees = [ 45, -90, 25.71, -40, -60, -30, 24, -40, 20]
+	let rotation = [ 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-setInterval(function () {
-	if (seconds >= 360) {
-		seconds = 0
-		minutes += 6;
+	rotateArrows()
+
+	/* Maps each cog and rotates it via rotation from rotate aray*/
+
+	function rotateCogs() {
+		let position = 0;
+
+		cogs.forEach(cog => {
+			cog.style.transform = `rotate(${rotation[position]}deg)`
+			position++;
+		})
 	}
 
-	if (minutes >= 360) {
-		minutes = 0
-		hours += 30;
+	/*Calculates rotation by mapping and summing arrays*/
+
+	function calcRotation() {
+		for (let i = 0; i < degrees.length; i++) {
+			rotation[i] += degrees[i]
+		}
+		
+		return rotation
 	}
+
+	/* Calculates and rotates each arrow*/
+
+	function rotateArrows() {
+
+		if (seconds >= 360) {
+			seconds = 0
+			minutes += 6;
+		}
+
+		if (minutes >= 360) {
+			minutes = 0
+			hours += 30;
+		}
+
 		seconds += 6
 		secondsRotate += 6
 		secondsArrow.style.transform = `rotate(${secondsRotate}deg)`
 		minutesArrow.style.transform = `rotate(${minutes}deg)`
 		hoursArrow.style.transform = `rotate(${hours}deg)`
+	}
 
-		cog1Timer += 45
-		cog2Timer -= 90
-		cog3Timer += 25.71
-		cog4Timer -= 40
-		cog5Timer -= 60
-		cog6Timer -= 30
-		cog7Timer += 24
-		cog8Timer -= 40
-		cogOrangeTimer += 20
+	/* Triggering the rest */
 
-		cog1.style.transform = `rotate(${cog1Timer}deg)`
-		cog2.style.transform = `rotate(${cog2Timer}deg)`
-		cog3.style.transform = `rotate(${cog3Timer}deg)`
-		cog4.style.transform = `rotate(${cog4Timer}deg)`
-		cog5.style.transform = `rotate(${cog5Timer}deg)`
-		cog6.style.transform = `rotate(${cog6Timer}deg)`
-		cog7.style.transform = `rotate(${cog7Timer}deg)`
-		cog8.style.transform = `rotate(${cog8Timer}deg)`
-		cogOrange.style.transform = `rotate(${cogOrangeTimer}deg)`
+	setInterval(function () {
+		calcRotation()
+		rotateCogs()
+		rotateArrows()
+	}, 1000);
 
+	/* Adds transition to the transform of each piece on load*/
+
+	setTimeout(function () {
+		cogs.forEach(cog => {
+			cog.classList.add('clock-transition')
+		})
+
+		secondsArrow.classList.add('clock-transition')
+		minutesArrow.classList.add('clock-transition')
+		hoursArrow.classList.add('clock-transition')
 	}, 1000);
 }
