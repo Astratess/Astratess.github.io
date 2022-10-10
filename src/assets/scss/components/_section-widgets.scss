@@ -6,13 +6,13 @@
 	padding: 20rem 5rem;
 	overflow: hidden;
 
-	.section__inner {
+	.widgets {
 		position: relative;
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
-		grid-template-areas:
-		"a . b . c . d"
-		". e . f . g ."
-		"h . i . j . k";
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
 	}
 }

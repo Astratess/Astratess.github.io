@@ -14,7 +14,7 @@ window.addEventListener('scroll', ()=> {
 		logoA.href = '#hero';
 		}
 
-	 else if (scrollPosition == 0){
+	 else if (scrollPosition == 0 && window.innerWidth > 1023){
 	 		logo.style.top = "90%"
 			logo.style.left = "96%"
 			setTimeout(() => {

@@ -7,17 +7,23 @@ widgets.forEach( widget => {
 })
 
 function openWidget(widget) {
-		const centerX = window.innerWidth / 2;
-		const centerY = window.innerHeight /2;
-		const origX = getOffset(widget.parentNode.parentNode).left
-		const origY = getOffset(widget.parentNode.parentNode).top
-		let endX = Math.floor(centerX - origX - (widget.offsetWidth) / 2);
-		let endY = Math.floor(centerY - origY - (widget.offsetHeight) / 2);
-		widget.parentNode.parentNode.style.transform = `translate(${endX - 300}px, ${endY}px)`
-		widget.parentNode.parentNode.classList.toggle('is-active')
-		/*$(widget.parentNode.parentNode).siblings().toggleClass('events-none')*/
-		$('.modal').toggleClass('is-active');
-		document.body.classList.toggle('is-locked')
+		if (window.innerWidth <= 812) {
+			widget.parentNode.parentNode.classList.toggle('is-active')
+			$(widget).parent().siblings().toggle(400)
+		}
+ 		else {
+			const centerX = window.innerWidth / 2;
+			const centerY = window.innerHeight /2;
+			const origX = getOffset(widget.parentNode.parentNode).left
+			const origY = getOffset(widget.parentNode.parentNode).top
+			let endX = Math.floor(centerX - origX - (widget.offsetWidth) / 2);
+			let endY = Math.floor(centerY - origY - (widget.offsetHeight) / 2);
+			widget.parentNode.parentNode.style.transform = `translate(${endX - centerX / 3}px, ${endY}px)`
+			widget.parentNode.parentNode.classList.toggle('is-active')
+			/*$(widget.parentNode.parentNode).siblings().toggleClass('events-none')*/
+			$('.modal').toggleClass('is-active');
+			document.body.classList.toggle('is-locked')
+		}
 }
 
 $('.modal').on('click', function(event) {

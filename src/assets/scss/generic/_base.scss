@@ -16,14 +16,29 @@ body {
 	line-height: $line-height-base;
 	color: #000;
 	background-image: url('../images/temp/background.jpg');
+	cursor: url('../images/cursor.png'), default;
 }
 
 body::-webkit-scrollbar {
 	display: none;
 }
 
+.light-mode {
+	cursor: url('../images/cursor-red.png'), default;
+	background-blend-mode: color-burn;
+
+	button:hover,
+	a:hover {
+		cursor: url('../images/cursor-red.png'), default;
+	}
+}
+
 .is-locked {
 	overflow: hidden;
+}
+
+button:hover {
+	cursor: url('../images/cursor.png'), default;
 }
 
 a {
@@ -33,6 +48,7 @@ a {
 
 	&:hover {
 		text-decoration: none;
+		cursor: url('../images/cursor.png'), default;
 	}
 
 	&[href^="tel"] {

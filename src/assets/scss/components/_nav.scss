@@ -62,19 +62,6 @@
 			}
 		}
 
-		@include breakpoint-down(tablet) {
-
-			&:before {
-				opacity: 1;
-				transform: translate(-.3rem, -50%) rotate(-100deg);
-			}
-			
-			&:after {
-				opacity: 1;
-				transform: translate(.4rem, -50%) rotate(80deg);
-			}
-		}
-
 		&.is-active {
 			&:before {
 				opacity: 1;
