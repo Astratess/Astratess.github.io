@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cookie&family=Dancing+Script&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	
 </head>
 
@@ -388,11 +389,11 @@
 				<div class="form">
 					<form action="?" method="post">
 						<div class="form__head">
-							<h1>Contact me</h1>
+							<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Contact me</h1>
 						</div><!-- /.form__head -->
 
 						<div class="form__body">
-							<div class="form__row">
+							<div class="form__row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
 								<label for="name" class="form__label" hidden=""></label>
 								
 								<div class="form__controls">
@@ -400,7 +401,7 @@
 								</div><!-- /.form__controls -->
 							</div><!-- /.form__row -->
 
-							<div class="form__row">
+							<div class="form__row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
 								<label for="email" class="form__label" hidden=""></label>
 								
 								<div class="form__controls">
@@ -408,7 +409,7 @@
 								</div><!-- /.form__controls -->
 							</div><!-- /.form__row -->
 
-							<div class="form__row">
+							<div class="form__row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
 								<label for="subject" class="form__label" hidden=""></label>
 								
 								<div class="form__controls">
@@ -416,7 +417,7 @@
 								</div><!-- /.form__controls -->
 							</div><!-- /.form__row -->
 
-							<div class="form__row">
+							<div class="form__row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
 								<label for="Message" class="form__label" hidden=""></label>
 								
 								<div class="form__controls">
@@ -425,7 +426,7 @@
 							</div><!-- /.form__row -->
 						</div><!-- /.form__body -->
 
-						<div class="form__actions">
+						<div class="form__actions" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
 							<button type="submit" class="form__btn">Send</button>
 						</div><!-- /.form__actions -->
 					</form>
@@ -465,7 +466,11 @@
 	}
 </script>
 <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/bundle.js" onload="modalClose()"></script>
+<script>
+	AOS.init();
+</script>
 
 </body>
 </html>

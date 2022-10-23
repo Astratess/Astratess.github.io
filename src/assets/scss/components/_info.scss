@@ -9,23 +9,84 @@
 	margin-left: auto;
 	display: flex;
 	background-color: var(--color-light-gray);
-	border-bottom: .4rem solid var(--color-primary);
+	transform: skew(-20deg, 0);
+	margin-right: -8rem;
+	color: var(--color-white);
 
+	@include breakpoint-down(mobile) {
+		width: 100%;
+		margin: 0;
+		transform: skew(0);
+	}
+
+	h3 {
+		font-family: $ff-cinzel;
+		color: var(--color-primary);
+	}
+
+	.info__animation {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-image: conic-gradient(transparent, transparent, transparent, var(--color-primary));
+			position: absolute;
+			top: 0;
+			left: 0;
+			animation: 10s rotateInfo linear infinite;
+		}
+	}
+
+	.info__inner {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: calc(100% - .4rem);
+		height: calc(100% - .4rem);
+		margin: .2rem;
+		background-color: var(--color-light-gray);
+		z-index: 2;
+
+		@include breakpoint-down(mobile) {
+			padding-inline: 1.5rem;
+		}
+	}
+
+	.info__content {
+		font-size: 2rem;
+		font-family: $ff-source-serif;
+		text-align: center;
+		max-width: 40rem;
+		transform: skew(20deg, 0);
+
+		@include breakpoint-down(mobile) {
+			transform: skew(0, 0);
+		}
+	}
 
 	.info__image {
 		position: absolute;
-		left: -7.5%;
-		height: 110%;
-		position: relative;
+		left: 0;
+		top: 0;
 		height: 100%;
 		width: 30rem;
-		overflow: hidden;
+		transform: skew(20deg, 0);
+		z-index: 5;
+
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
 
 		img {
 			width: 100%;
 			height: 100%;
 			display: block;
-			transform: skew(25deg, 0deg) scale(1.8, 1.5);
 		}
 	}
 
@@ -33,85 +94,73 @@
 		margin-right: auto;
 		margin-left: 0;
 		flex-direction: row-reverse;
+		transform: skew(20deg, 0);
+		margin-right: 0;
+		margin-left: -8rem;
 
-		.info__media {
-			transform: skew(25deg, 0deg) translateY(-5%);
+		@include breakpoint-down(mobile) {
+			width: 100%;
+			margin: 0;
+			transform: skew(0);
+		}
+
+		.info__content {
+			max-width: 40rem;
+			transform: skew(-20deg, 0);
+
+			@include breakpoint-down(mobile) {
+				transform: skew(0, 0);
+			}
+		}
+
+		.info__image {
+			transform: skew(-20deg, 0);
 			left: auto;
-			right: -7.5%;
-
-			&:before {
-				left: -25%;
-			}
-			
-			&:after {
-				left: 25%;
-			}
-
-			img {
-				transform: skew(-25deg, 0deg) scale(1.8, 1.5);
-			}
+			right: 0;
 		}
 	}
 
 	&:nth-child(1) {
-		.info__media {
-			&:before,
-			&:after {
-				background-image:  url(../images/temp/about-me.jpg);
-			}
-
-			&:before {
-				background-size: 113rem 67rem;
-				background-position: -71rem 0;
-			}
-
-			&:after {
-				background-size: 113rem 67rem;
-				background-position: -58rem bottom;
-			}
+		.info__image {
+			top: 12%;
+			left: -26rem;
 		}
 	}
 
 	&:nth-child(2) {
-		.info__media {
-			&:before,
-			&:after {
-				background-image:  url(../images/temp/about-me-guitar.jpeg);
-			}
-
-			&:before {
-				background-size: 96rem 61rem;
-				background-position: -51rem -1rem;
-			}
-
-			&:after {
-				background-size: 90rem 80rem;
-				background-position: -59rem 15rem;
-			}
-		}		
+		.info__image {
+			top: -15%;
+			right: -20rem;
+			height: 120%;
+		}
 	}
 
 	&:nth-child(3) {
-		.info__media {
-			&:before,
-			&:after {
-				background-image:  url(../images/temp/about-me-waterfall.jpg);
-			}
-
-			&:before {
-				background-size: 113rem 67rem;
-				background-position: -71rem 0;
-			}
-
-			&:after {
-				background-size: 153rem 37rem;
-				background-position: -49rem bottom;
-			}
-		}	
+		.info__image {
+			top: 25%;
+			left: -13rem;
+		}
 	}
-
 }
 
 .info + .info {
 	margin-top: 20rem;
+
+	@include breakpoint-down(mobile) {
+		margin-top: 4rem;
+	}
+}
+
+@keyframes rotateInfo {
+	0% {
+		transform: translateX(-40%) rotate(0deg);
+	}
+
+	50% {
+		transform: translateX(50%) rotate(180deg);
+	}
+
+	100% {
+		transform: translateX(-40%) rotate(360deg);
+	}
 }

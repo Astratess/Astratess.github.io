@@ -17,13 +17,15 @@ window.addEventListener('scroll', ()=> {
 	 else if (scrollPosition == 0 && window.innerWidth > 1023){
 	 		logo.style.top = "90%"
 			logo.style.left = "96%"
+			logo.style.transform = 'translateX(20rem)'
 			setTimeout(() => {
+				logo.style.transform = ''
 				logo.style.animation = '2s fade forwards'
 				logo.style.top = "-10%"
 				logo.style.left = "6rem"
 				logo.classList.remove('logo')
 				logoA.classList.remove('logo-a')
 				logoA.href='index.html'
-			, 1000});
+			}, 1000);
 	 }
 })

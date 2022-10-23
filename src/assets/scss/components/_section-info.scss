@@ -5,4 +5,9 @@
 .section-info {
 	padding-block: 20rem;
 	background-color: var(--color-black);
+	overflow: hidden;
+
+	@include breakpoint-down(mobile) {
+		padding-block: 4rem;
+	}
 }

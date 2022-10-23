@@ -43,7 +43,6 @@
 			background-color: var(--color-white);
 			opacity: 0;
 			visibility: hidden;
-			transition: 1s opacity 1s;
 			box-shadow: 0 0 .6rem var(--color-white); 
 		}
 
@@ -83,7 +82,6 @@
 		border-radius: 2rem;
 		transform: scaleX(0);
 		transform-origin: left;
-		transition: 1s transform .5s;
 		overflow: hidden;
 		box-shadow: 0 0 2rem var(--color-white);
 
@@ -102,7 +100,6 @@
 		display: inline-block;
 		position: relative;
 		transform: translateX(-70rem);
-		transition: 1s transform 1s;
 		height: 80%;
 		width: 70%;
 		padding-right: 2rem;
@@ -204,6 +201,7 @@
 			&:after {
 				visibility: visible;
 				opacity: 1;
+				transition: 1s opacity 1s;
 			}
 		}
 
@@ -211,6 +209,7 @@
 			opacity: 1;
 			pointer-events: all;
 			transform: scaleX(1);
+			transition: 1s transform .5s;
 
 			@include breakpoint-down(mobile) {
 				transform: translate(-50%);
@@ -220,6 +219,7 @@
 		.widget__body-inner {
 			opacity: 1;
 			transform: translateX(0);
+			transition: 1s transform 1s;
 		}
 	}
 

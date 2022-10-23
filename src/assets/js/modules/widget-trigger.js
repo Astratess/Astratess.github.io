@@ -35,9 +35,9 @@ $('.modal').on('click', function(event) {
 
 
 function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    left: rect.left,
-    top: rect.top
-  };
+	const rect = el.getBoundingClientRect(); 	
+	return {
+		left: rect.left,
+		top: rect.top
+	};
 }
