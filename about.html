@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cookie&family=Dancing+Script&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	
 </head>
 
@@ -90,45 +91,71 @@
 
 
 		<div class="hero-about" id="hero">
-			<div class="hero__inner">
+			<div class="shell">
 				<div class="hero__content">
-					<h2><span>You are a community</span>past, present & future.</h2>
+					<h2><em><span>You are a community</span>past, present & future.</em></h2>
 				</div><!-- /.hero__content -->
 
-				<figure class="hero__image">
-					<img src="./assets/images/temp/business-color.png" alt="" width="600" height="800">
+				<div class="hero__image-holder">
+					<figure class="hero__image">
+						<img src="./assets/images/temp/business-color.png" alt="" width="600" height="800">
 
-					<img src="./assets/images/temp/businessbg.png" alt="" width="600" height="800">
+						<img src="./assets/images/temp/businessbg.png" alt="" width="600" height="800">
 
-					<img src="./assets/images/temp/businessme.png" alt="" width="600" height="800">
-				</figure><!-- /.hero__image -->
-			</div><!-- /.hero__inner -->
+						<img src="./assets/images/temp/businessme.png" alt="" width="600" height="800">
+					</figure><!-- /.hero__image -->
+				</div><!-- /.hero__image-holder -->
+			</div><!-- /.shell -->
 		</div><!-- /.hero-about -->
 
 		<section class="section-info">
 			<div class="info">
 				<figure class="info__image">
-					<img src="./assets/images/temp/" alt="" width="720" height="960">
-				</figure><!-- /.info__image -->
-				
-				<div class="info__content"></div><!-- /.info__content -->
-			</div><!-- /.info -->
-			
-			<div class="info">
-				<figure class="info__image">
-					<img src="./assets/images/temp/" alt="" width="720" height="960">
-				</figure><!-- /.info__image -->
-				
-				<div class="info__content"></div><!-- /.info__content -->
-			</div><!-- /.info -->
-			
-			<div class="info">
-				<figure class="info__image">
-					<img src="./assets/images/temp/" alt="" width="720" height="960">
+					<img src="./assets/images/temp/left-self.png" alt="" width="700" height="600">
 				</figure><!-- /.info__image -->
 
-				
-				<div class="info__content"></div><!-- /.info__content -->
+				<div class="info__animation">
+					<div class="info__inner">
+						<div class="info__content">
+							<h3>Kinda workaholic</h3>
+
+							<p>Investing alot of time in projects I am passionate about. Sometimes even forgeting to eat.</p>
+						</div><!-- /.info__content -->
+					</div><!-- /.info__inner -->
+				</div><!-- /.info__animation -->
+			</div><!-- /.info -->
+			
+			<div class="info">
+				<figure class="info__image">
+					<img src="./assets/images/temp/right-selff.png" alt="" width="500" height="800">
+				</figure><!-- /.info__image -->
+
+				<div class="info__animation">
+					<div class="info__inner">						
+						<div class="info__content">
+							<h3>Constantly learning</h3>
+
+							<p>Knowledge is an investment that can change your life.
+							Investing your time in knowledge is the best investment that you can make.</p>
+						</div><!-- /.info__content -->
+					</div><!-- /.info__inner -->
+				</div><!-- /.info__animation -->
+			</div><!-- /.info -->
+			
+			<div class="info">
+				<figure class="info__image">
+					<img src="./assets/images/temp/sit-self.png" alt="" width="700" height="600">
+				</figure><!-- /.info__image -->
+
+				<div class="info__animation">
+					<div class="info__inner">
+						<div class="info__content">
+							<h3>Obsessed with creating</h3>
+
+							<p>I love to create stuff. Websites, drawings, games, songs. Things that can affect people when they encounter them.</p>
+						</div><!-- /.info__content -->
+					</div><!-- /.info__inner -->
+				</div><!-- /.info__animation -->
 			</div><!-- /.info -->
 		</section><!-- /.section-info -->
 
@@ -143,7 +170,11 @@
 	}
 </script>
 <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/bundle.js" onload="modalClose()"></script>
+<script>
+	AOS.init();
+</script>
 
 </body>
 </html>

@@ -212,7 +212,6 @@ if (document.querySelector('.clock')) {
 if (document.querySelector('.widgets')) {
   var widgets = document.querySelectorAll('.widget');
   var gridCols = getComputedStyle(document.querySelector('.widgets')).gridTemplateColumns.split(' ');
-  console.log(gridCols.length);
   var row = 1;
   var col = 1;
   widgets.forEach(function (widget) {
@@ -282,14 +281,16 @@ window.addEventListener('scroll', function () {
   } else if (scrollPosition == 0 && window.innerWidth > 1023) {
     logo.style.top = "90%";
     logo.style.left = "96%";
+    logo.style.transform = 'translateX(20rem)';
     setTimeout(function () {
+      logo.style.transform = '';
       logo.style.animation = '2s fade forwards';
       logo.style.top = "-10%";
       logo.style.left = "6rem";
       logo.classList.remove('logo');
       logoA.classList.remove('logo-a');
-      logoA.href = 'index.html', 1000;
-    });
+      logoA.href = 'index.html';
+    }, 1000);
   }
 });
 
